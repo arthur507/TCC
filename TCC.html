@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel - Império</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="palette">
+    <div class="swatch dark"></div>
+    <div class="swatch beige-dark"></div>
+    <div class="swatch beige"></div>
+    <div class="swatch red"></div>
+    <div class="swatch red-dark"></div>
+  </div>
+
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">⚜️</div>
+      <nav>
+        <button class="nav-btn active" data-panel="login">Desktop - 1</button>
+        <button class="nav-btn" data-panel="desktop2">Desktop - 2</button>
+        <button class="nav-btn" data-panel="meuPerfil">Meu Perfil</button>
+        <button class="nav-btn" data-panel="minhaTurma">Minha Turma</button>
+        <button class="nav-btn" data-panel="atividades">Atividades</button>
+        <button class="nav-btn" data-panel="materias">Matérias</button>
+        <button class="nav-btn" data-panel="notas">Notas</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <!-- Panel: Login (Desktop -1) -->
+      <section id="login" class="panel active">
+        <div class="card login-card">
+          <h2>Entrar</h2>
+          <form id="loginForm">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="seu@exemplo.com" required />
+
+            <label for="password">Senha</label>
+            <input id="password" type="password" placeholder="Senha" required />
+
+            <div class="actions">
+              <button type="submit" class="btn">Entrar</button>
+            </div>
+
+            <p id="loginMessage" class="msg"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Panel: Desktop 2 (simplified) -->
+      <section id="desktop2" class="panel">
+        <div class="card small">
+          <h3>Notificações</h3>
+          <p>Bem-vindo ao painel secundário.</p>
+        </div>
+      </section>
+
+      <!-- Panel: Meu Perfil -->
+      <section id="meuPerfil" class="panel">
+        <div class="card profile">
+          <div class="avatar">👤</div>
+          <h3 id="userName">Usuário</h3>
+          <p id="userEmail">usuario@exemplo.com</p>
+          <ul class="infoList">
+            <li>Função: Aluno</li>
+            <li>Turma: A1</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Panel: Minha Turma -->
+      <section id="minhaTurma" class="panel">
+        <div class="card list">
+          <h3>Minha Turma</h3>
+          <ul>
+            <li>Rosana</li>
+            <li>Robertson</li>
+            <li>Outros</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Panel: Atividades -->
+      <section id="atividades" class="panel">
+        <div class="card">
+          <h3>Atividades</h3>
+          <div class="activity">
+            <p>Entregar relatório</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel: Matérias -->
+      <section id="materias" class="panel">
+        <div class="card">
+          <h3>Matérias</h3>
+          <ul class="subjects">
+            <li>História</li>
+            <li>Geografia</li>
+            <li>Matemática</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Panel: Notas -->
+      <section id="notas" class="panel">
+        <div class="card grades">
+          <h3>Notas</h3>
+          <table>
+            <thead>
+              <tr><th>Matéria</th><th>1º Bim</th><th>2º Bim</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>História</td><td>8.5</td><td>9.0</td></tr>
+              <tr><td>Geografia</td><td>7.0</td><td>8.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
