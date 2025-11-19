@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel - Império</title>
+
+  <!-- Fontes (usadas: Inter para UI; carregamento via Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <!-- substituiu o ícone pelo logo enviado -->
+        <img src="/mnt/data/lion.png" alt="Logo King School" class="brand-logo" />
+        <span class="brand-text">IMPÉRIO</span>
+      </div>
+
+      <nav>
+        <button class="nav-btn active" data-panel="login">Login</button>
+        <button class="nav-btn" data-panel="meuPerfil">Meu Perfil</button>
+        <button class="nav-btn" data-panel="minhaTurma">Minha Turma</button>
+        <button class="nav-btn" data-panel="atividades">Atividades</button>
+        <button class="nav-btn" data-panel="materias">Matérias</button>
+        <button class="nav-btn" data-panel="notas">Notas</button>
+        <button class="nav-btn" data-panel="sair">Sair</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <!-- LOGIN -->
+      <section id="login" class="panel active">
+        <div class="card login-card">
+          <h2>Entrar no Sistema</h2>
+          <form id="loginForm" autocomplete="off">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="seu@exemplo.com" required />
+
+            <label for="password">Senha</label>
+            <input id="password" type="password" placeholder="Digite sua senha" required />
+
+            <div class="actions">
+              <button type="submit" class="btn">Entrar</button>
+            </div>
+
+            <p id="loginMessage" class="msg"></p>
+
+            <div class="hint">
+              <strong>Emails permitidos:</strong>
+              <ul>
+                <li>rosana@admin.com (senha: admin123)</li>
+                <li>robertson@aluno.com (senha: aluno123)</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- MEU PERFIL -->
+      <section id="meuPerfil" class="panel">
+        <div class="card profile">
+          <div class="avatar">👩‍🏫</div>
+          <h3 id="userName">Usuário</h3>
+          <p id="userEmail">usuario@exemplo.com</p>
+          <div class="profile-meta">
+            <div><strong>Função:</strong> <span id="userRole">Aluno</span></div>
+            <div><strong>Turma:</strong> <span id="userClass">A1</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINHA TURMA -->
+      <section id="minhaTurma" class="panel">
+        <div class="card list">
+          <h3>Minha Turma - A1</h3>
+          <div class="grid-members">
+            <div class="member">
+              <div class="member-avatar">🧑‍🏫</div>
+              <div class="member-info">
+                <strong>Rosana</strong>
+                <span>rosana@admin.com</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">👨‍🎓</div>
+              <div class="member-info">
+                <strong>Robertson</strong>
+                <span>robertson@aluno.com</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">👩‍🎓</div>
+              <div class="member-info">
+                <strong>Ana Clara</strong>
+                <span>ana@aluno.com</span>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member-avatar">👨‍🎓</div>
+              <div class="member-info">
+                <strong>Bruno Silva</strong>
+                <span>bruno@aluno.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ATIVIDADES -->
+      <section id="atividades" class="panel">
+        <div class="card">
+          <h3>Atividades Pendentes</h3>
+          <div class="activity-list">
+            <article class="activity-card">
+              <div class="activity-title">Relatório sobre Revolução Francesa</div>
+              <div class="activity-meta">Prazo: 2025-12-20 • <span class="tag history">História</span></div>
+              <p>Entregar um relatório de 3 páginas sobre a Revolução Francesa.</p>
+            </article>
+
+            <article class="activity-card">
+              <div class="activity-title">Exercícios de Equações</div>
+              <div class="activity-meta">Prazo: 2025-12-15 • <span class="tag math">Matemática</span></div>
+              <p>Resolver os exercícios da página 45 a 50 do livro.</p>
+            </article>
+
+            <article class="activity-card">
+              <div class="activity-title">Mapa do Brasil</div>
+              <div class="activity-meta">Prazo: 2025-12-18 • <span class="tag geo">Geografia</span></div>
+              <p>Criar um mapa com as regiões do Brasil.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MATÉRIAS -->
+      <section id="materias" class="panel">
+        <div class="card">
+          <h3>Minhas Matérias</h3>
+          <div class="subjects-grid">
+            <div class="subject">
+              <div class="subject-icon">📜</div>
+              <div>
+                <strong>História</strong>
+                <div class="teacher">Prof. Carlos Silva</div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div class="subject-icon">🌍</div>
+              <div>
+                <strong>Geografia</strong>
+                <div class="teacher">Profa. Maria Santos</div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div class="subject-icon">➗</div>
+              <div>
+                <strong>Matemática</strong>
+                <div class="teacher">Prof. João Almeida</div>
+              </div>
+            </div>
+
+            <div class="subject">
+              <div class="subject-icon">📝</div>
+              <div>
+                <strong>Português</strong>
+                <div class="teacher">Profa. Ana Costa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTAS -->
+      <section id="notas" class="panel">
+        <div class="card grades">
+          <h3>Minhas Notas</h3>
+          <table>
+            <thead>
+              <tr><th>Matéria</th><th>1º Bim</th><th>2º Bim</th><th>Média</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>História</td><td>8.5</td><td>9.0</td><td>8.75</td></tr>
+              <tr><td>Geografia</td><td>7.0</td><td>8.2</td><td>7.6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sair (simples) -->
+      <section id="sair" class="panel">
+        <div class="card">
+          <h3>Sair</h3>
+          <p>Clique em <button id="logoutBtn" class="link-btn">Sair</button> para voltar ao login.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
